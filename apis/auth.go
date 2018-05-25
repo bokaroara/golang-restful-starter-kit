@@ -3,12 +3,12 @@ package apis
 import (
 	"time"
 
+	"github.com/bokaroara/golang-restful-starter-kit/app"
+	"github.com/bokaroara/golang-restful-starter-kit/errors"
+	"github.com/bokaroara/golang-restful-starter-kit/models"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/go-ozzo/ozzo-routing"
 	"github.com/go-ozzo/ozzo-routing/auth"
-	"github.com/qiangxue/golang-restful-starter-kit/app"
-	"github.com/qiangxue/golang-restful-starter-kit/errors"
-	"github.com/qiangxue/golang-restful-starter-kit/models"
 )
 
 type Credential struct {

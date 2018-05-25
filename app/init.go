@@ -7,11 +7,11 @@ import (
 	"time"
 
 	"github.com/Sirupsen/logrus"
+	"github.com/bokaroara/golang-restful-starter-kit/errors"
 	"github.com/go-ozzo/ozzo-routing"
 	"github.com/go-ozzo/ozzo-routing/access"
 	"github.com/go-ozzo/ozzo-routing/fault"
 	"github.com/go-ozzo/ozzo-validation"
-	"github.com/qiangxue/golang-restful-starter-kit/errors"
 )
 
 // Init returns a middleware that prepares the request context and processing environment.

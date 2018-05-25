@@ -5,17 +5,17 @@ import (
 	"net/http"
 
 	"github.com/Sirupsen/logrus"
+	"github.com/bokaroara/golang-restful-starter-kit/apis"
+	"github.com/bokaroara/golang-restful-starter-kit/app"
+	"github.com/bokaroara/golang-restful-starter-kit/daos"
+	"github.com/bokaroara/golang-restful-starter-kit/errors"
+	"github.com/bokaroara/golang-restful-starter-kit/services"
 	"github.com/go-ozzo/ozzo-dbx"
 	"github.com/go-ozzo/ozzo-routing"
 	"github.com/go-ozzo/ozzo-routing/auth"
 	"github.com/go-ozzo/ozzo-routing/content"
 	"github.com/go-ozzo/ozzo-routing/cors"
 	_ "github.com/lib/pq"
-	"github.com/qiangxue/golang-restful-starter-kit/apis"
-	"github.com/qiangxue/golang-restful-starter-kit/app"
-	"github.com/qiangxue/golang-restful-starter-kit/daos"
-	"github.com/qiangxue/golang-restful-starter-kit/errors"
-	"github.com/qiangxue/golang-restful-starter-kit/services"
 )
 
 func main() {
@@ -32,7 +32,7 @@ func main() {
 	// create the logger
 	logger := logrus.New()
 
-	// connect to the database
+	// connect to the databasex
 	db, err := dbx.MustOpen("postgres", app.Config.DSN)
 	if err != nil {
 		panic(err)
@@ -52,7 +52,7 @@ func buildRouter(logger *logrus.Logger, db *dbx.DB) *routing.Router {
 	router := routing.New()
 
 	router.To("GET,HEAD", "/ping", func(c *routing.Context) error {
-		c.Abort()  // skip all other middlewares/handlers
+		c.Abort() // skip all other middlewares/handlers
 		return c.Write("OK " + app.Version)
 	})
 

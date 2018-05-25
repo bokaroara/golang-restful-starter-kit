@@ -3,9 +3,9 @@ package daos
 import (
 	"testing"
 
-	"github.com/qiangxue/golang-restful-starter-kit/app"
-	"github.com/qiangxue/golang-restful-starter-kit/models"
-	"github.com/qiangxue/golang-restful-starter-kit/testdata"
+	"github.com/bokaroara/golang-restful-starter-kit/app"
+	"github.com/bokaroara/golang-restful-starter-kit/models"
+	"github.com/bokaroara/golang-restful-starter-kit/testdata"
 	"github.com/stretchr/testify/assert"
 )
 

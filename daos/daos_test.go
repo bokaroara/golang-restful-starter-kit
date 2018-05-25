@@ -3,8 +3,8 @@ package daos
 import (
 	"time"
 
+	"github.com/bokaroara/golang-restful-starter-kit/app"
 	"github.com/go-ozzo/ozzo-dbx"
-	"github.com/qiangxue/golang-restful-starter-kit/app"
 )
 
 func testDBCall(db *dbx.DB, f func(rs app.RequestScope)) {
